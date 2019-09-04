@@ -131,6 +131,8 @@ table {
 }
 html {
   font-size: 62.5%;
+  
+  
 }
 html,
 body {
@@ -349,4 +351,7 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.large {
+  transform: scale(1.3);
 }
