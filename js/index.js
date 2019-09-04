@@ -71,6 +71,7 @@ navs.forEach(item=>{
          contntColor.style.background ="#59ffd5";
          e.stopPropagation();
        })
+      //  const contntColor = document.querySelector(".content-section");
 //   text.forEach(text.addEventListener('focus', (event) => {
 //     event.target.style.background = 'pink';    
 //   }));
@@ -81,10 +82,21 @@ navs.forEach(item=>{
 //   });
 const card = document.querySelectorAll('img');
 card.forEach(item=>{
-  item.addEventListener('dblclick', function (e) {
+  item.addEventListener('focus', function (e) {
   item.classList.toggle('large');
 
  })
+
+ document.querySelectorAll("img").forEach(function(ele) {
+  ele.addEventListener("keydown", function(e) {
+      // ele.style.transform = "rotateX(180deg)";
+      // TweenLite.to(ele, 2, {transform: "rotate(349deg)"});
+      // TweenLite.to(ele, 2, {transform: "rotate(180deg)"});
+         TweenLite.to(ele, 2, {transform: "rotate(-180deg)"});
+
+         // console.log(ele);
+  })
+})
  
 });
  const h2s=document.querySelectorAll('h2') 
@@ -102,6 +114,13 @@ h2s.forEach(item =>{
 // });
 
 window.addEventListener('resize', e => {
-  const changeTitle = document.querySelector("logo-heading");
+  const changeTitle = document.getElementById("logo-heading");
   changeTitle.textContent="Bus Rules......"
+});
+
+const contenth4 = document.querySelector("img");
+contenth4.forEach(element => {
+  element.addEventListener("mouseover", e => {
+    e.style.transform = "scale(1.2)";
+  });
 });
